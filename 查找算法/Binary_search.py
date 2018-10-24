@@ -13,7 +13,7 @@ def binary_search(num_list,tar):
     low = 0
     high = len(num_list) - 1
     while low <= high:               # 对列表进行循环，知道查找到tar
-        mid = (low + high)/2         # 中间数下标
+        mid = int((low + high)/2)       # 中间数下标
         if num_list[mid] == tar :
             return mid
         elif num_list[mid] > tar:
@@ -23,6 +23,6 @@ def binary_search(num_list,tar):
     return -1                        #如果查找不到就返回-1
 
 if __name__ == '__main__':
-    num_list = [i for i in range(20,3)]       # 所查找的列表（升序）
-    tar = 5                                   # 要查找的值
+    num_list = [0,3,5,9,10]       # 所查找的列表（升序）
+    tar = 10                                   # 要查找的值
     print(binary_search(num_list,tar))
